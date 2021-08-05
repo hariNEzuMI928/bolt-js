@@ -159,6 +159,9 @@ module.exports = {
         // override section below because a distinct override is necessary in JavaScript files.
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': ['error', 'nofunc'],
+        'operator-linebreak': ['error', 'after', { overrides: {
+          '=': 'none'
+        }}],
       },
     },
     {
