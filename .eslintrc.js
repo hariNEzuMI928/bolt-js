@@ -250,6 +250,25 @@ module.exports = {
         ],
       },
     },
+    {
+      files: ['src/**/*.spec.ts'],
+      rules: {
+        // Test-specific rules
+        // ---
+        // Rules that only apply to Typescript _test_ source files
+
+        // With Mocha as a test framework, it is sometimes helpful to assign
+        // shared state to Mocha's Context object, for example in setup and
+        // teardown test methods. Assigning stub/mock objects to the Context
+        // object via `this` is a common pattern in Mocha. As such, using
+        // `function` over the the arrow notation binds `this` appropriately and
+        // should be used in tests. So: we turn off the prefer-arrow-callback
+        // rule.
+        // See https://github.com/slackapi/bolt-js/pull/1012#pullrequestreview-711232738
+        // for a case of arrow-vs-function syntax coming up for the team
+        'prefer-arrow-callback': 'off',
+      },
+    },
   ],
 };
 
