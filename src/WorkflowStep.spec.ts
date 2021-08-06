@@ -296,6 +296,7 @@ describe('WorkflowStep', () => {
 
   describe('processStepMiddleware', () => {
     it('should call each callback in user-provided middleware', async () => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { next, ...fakeArgs } = createFakeStepEditAction() as unknown as AllWorkflowStepMiddlewareArgs;
       const { processStepMiddleware } = await importWorkflowStep();
 

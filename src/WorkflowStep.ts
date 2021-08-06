@@ -352,6 +352,7 @@ function createStepFail(args: AllWorkflowStepMiddlewareArgs<WorkflowStepExecuteM
  * */
 // TODO :: refactor to incorporate a generic parameter
 export function prepareStepArgs(args: any): AllWorkflowStepMiddlewareArgs {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { next, ...stepArgs } = args;
   const preparedArgs: any = { ...stepArgs };
 

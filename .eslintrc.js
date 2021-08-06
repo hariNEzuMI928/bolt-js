@@ -190,6 +190,13 @@ module.exports = {
         // both purposes, and it works fine on non-TypeScript code.
         camelcase: 'off',
         'no-underscore-dangle': 'off',
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          {
+            varsIgnorePattern: '^_',
+            argsIgnorePattern: '^_'
+          }
+        ],
         '@typescript-eslint/naming-convention': [
           'error',
           {
